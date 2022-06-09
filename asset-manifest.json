@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/adresBooks/static/css/main.4b78af01.chunk.css",
-    "main.js": "/adresBooks/static/js/main.5bceff21.chunk.js",
-    "main.js.map": "/adresBooks/static/js/main.5bceff21.chunk.js.map",
+    "main.js": "/adresBooks/static/js/main.f3d9dc70.chunk.js",
+    "main.js.map": "/adresBooks/static/js/main.f3d9dc70.chunk.js.map",
     "runtime~main.js": "/adresBooks/static/js/runtime~main.ffae2bcf.js",
     "runtime~main.js.map": "/adresBooks/static/js/runtime~main.ffae2bcf.js.map",
-    "static/css/2.0624914a.chunk.css": "/adresBooks/static/css/2.0624914a.chunk.css",
-    "static/js/2.1be79cb8.chunk.js": "/adresBooks/static/js/2.1be79cb8.chunk.js",
-    "static/js/2.1be79cb8.chunk.js.map": "/adresBooks/static/js/2.1be79cb8.chunk.js.map",
+    "static/css/2.3661fc73.chunk.css": "/adresBooks/static/css/2.3661fc73.chunk.css",
+    "static/js/2.cf504a85.chunk.js": "/adresBooks/static/js/2.cf504a85.chunk.js",
+    "static/js/2.cf504a85.chunk.js.map": "/adresBooks/static/js/2.cf504a85.chunk.js.map",
     "index.html": "/adresBooks/index.html",
-    "precache-manifest.20f56c61df354426e5a80f0ce50fa9f8.js": "/adresBooks/precache-manifest.20f56c61df354426e5a80f0ce50fa9f8.js",
+    "precache-manifest.b05b45a33de01155b2e01a2fe99ef4a9.js": "/adresBooks/precache-manifest.b05b45a33de01155b2e01a2fe99ef4a9.js",
     "service-worker.js": "/adresBooks/service-worker.js",
-    "static/css/2.0624914a.chunk.css.map": "/adresBooks/static/css/2.0624914a.chunk.css.map",
+    "static/css/2.3661fc73.chunk.css.map": "/adresBooks/static/css/2.3661fc73.chunk.css.map",
     "static/css/main.4b78af01.chunk.css.map": "/adresBooks/static/css/main.4b78af01.chunk.css.map",
     "static/media/App.css": "/adresBooks/static/media/bckground.a5d87150.png"
   }
