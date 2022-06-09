@@ -81,6 +81,9 @@ onSubmit=async(dispatch,e)=>
         instagram,
         facebook,
     }
+
+    //Axios, async-await yapısını kullanabilmenizi sağlayan promise tabanlı mini minnacık bir http client’dır.
+    // Başlangıçta oluşturduğumuz için boş pages adlı dizinin değerini setState ile axios htpp client üzerinden elde ettiğimiz json datasına eşitliyoruz.
     
     const res = await axios.post('https://jsonplaceholder.typicode.com/users',newContact);
     
