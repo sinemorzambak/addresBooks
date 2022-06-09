@@ -16,6 +16,7 @@ import './App.css';
 
 function App() {
    
+  // bütün componentleri route ile yolunu belirledik. Route, bir konumun link ile eşleştiğinde bazı componentleri arayüzde oluşturmaktır.
   return (
       <Provider >
       <Router>

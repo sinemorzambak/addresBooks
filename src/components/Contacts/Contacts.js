@@ -1,4 +1,4 @@
- //if you are using constructor only for initialising state, you need not a constructor, you can simply write state ={} inside a class directly without a constructor
+ // yapıcıyı yalnızca durumu başlatmak için kullanıyorsanız, bir yapıcıya ihtiyacınız yoktur, yalnızca bir sınıfın içine bir yapıcı olmadan doğrudan state ={} yazabilirsiniz
 
 import React,{Component} from 'react';
 import Contact from './Contact';

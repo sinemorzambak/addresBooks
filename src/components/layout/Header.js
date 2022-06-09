@@ -37,7 +37,7 @@ const Header =props=>
 
 };
 
-//You can define default values for your props by assigning to the special defaultProps property
+// Özel defaultProps özelliğine atayarak prop'larınız için varsayılan değerler tanımlayabilirsiniz.
 Header.defaultProps={
     branding: "Contact App Default"
 }
