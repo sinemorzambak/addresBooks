@@ -3,7 +3,7 @@ import {Consumer} from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
 import axios from 'axios';
 class EditContact extends Component{
-    //When you create a form, each input is going to be a part of the state.
+    
     state={
         name:'',
         email:'',
@@ -43,7 +43,7 @@ onSubmit=async(dispatch,e)=>
 
     const {name,email,phone,home_address,work_address,twitter,instagram,facebook}=this.state;
     
-    //Check for Errors
+    //Hata Kontrolü
     if(name==='' )
         {
             this.setState({errors:{name:'Name is required !'}});
@@ -96,14 +96,14 @@ onSubmit=async(dispatch,e)=>
         facebook,
     }
     
-    //put request is to update
+    //Güncellemek için istek gönderdik.
      const {id} = this.props.match.params;
         const res = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`,updateContact);
         
     
     dispatch({type:'UPDATE_CONTACT',payload:res.data});
     
-    //Clear form
+    //Formu temizledik
     this.setState({
         name:'',
         email:'',
@@ -116,7 +116,7 @@ onSubmit=async(dispatch,e)=>
         errors:{},
     })
     
-    //For redirection
+    //Yönlendirme için
     
     this.props.history.push('/');
 }

@@ -99,7 +99,7 @@ onSubmit=async(dispatch,e)=>
         errors:{},
     })
     
-    //For redirection
+    //Yönlendirmek için 
     
     this.props.history.push('/');
 }
