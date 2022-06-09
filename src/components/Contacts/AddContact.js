@@ -2,8 +2,9 @@ import React,{Component} from 'react';
 import {Consumer} from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
 import axios from 'axios';
+
 class AddContact extends Component{
-    //When you create a form, each input is going to be a part of the state.
+    
     state={
         name:'',
         email:'',
@@ -11,6 +12,8 @@ class AddContact extends Component{
         work_address:'',
         phone:'',
         twitter:'',
+        instagram: '',
+        facebook:'',
         errors:{}
   
     }
@@ -23,39 +26,50 @@ onSubmit=async(dispatch,e)=>
 {
         e.preventDefault();
 
-    const {name,email,phone,home_address,work_address,twitter}=this.state;
+    const {name,email,phone,home_address,work_address,twitter,instagram,facebook}=this.state;
     
-    //Check for Errors
+    //Hata Kontrolü
     if(name==='' )
         {
-            this.setState({errors:{name:'Name is required !'}});
+            this.setState({errors:{name:'İsim soyisim gereklidir!'}});
             return;
         }
     if(email==='' )
         {
-            this.setState({errors:{email:'Email is required !'}});
+            this.setState({errors:{email:'Email gereklidir!'}});
             return;
         }
     if(phone==='' )
         {
-            this.setState({errors:{phone:'Phone is required !'}});
+            this.setState({errors:{phone:'Telefon numarası gereklidir!'}});
             return;
         }
     if(home_address==='' )
         {
-            this.setState({errors:{home_address:'home address is required !'}});
+            this.setState({errors:{home_address:'Ev adresi gereklidir!'}});
             return;
         }
     if(work_address==='' )
         {
-            this.setState({errors:{work_address:'home address is required !'}});
+            this.setState({errors:{work_address:'İş adresi gereklidir!'}});
             return;
         }
     if(twitter==='' )
         {
-            this.setState({errors:{twitter:'home address is required !'}});
+            this.setState({errors:{twitter:'Twitter gereklidir!'}});
             return;
         }
+    if(instagram==='' )
+        {
+            this.setState({errors:{instagram:'Instagram gereklidir !'}});
+            return;
+        }
+    if(facebook==='' )
+        {
+            this.setState({errors:{facebook:'Facebook gereklidir!'}});
+            return;
+        }
+
 
     const newContact ={
         name,
@@ -64,6 +78,8 @@ onSubmit=async(dispatch,e)=>
         home_address,
         work_address,
         twitter,
+        instagram,
+        facebook,
     }
     
     const res = await axios.post('https://jsonplaceholder.typicode.com/users',newContact);
@@ -78,6 +94,8 @@ onSubmit=async(dispatch,e)=>
         home_address: '',
         work_address:'',
         twitter:'',
+        instagram:'',
+        facebook:'',
         errors:{},
     })
     
@@ -88,7 +106,7 @@ onSubmit=async(dispatch,e)=>
     render()
     {
          
-    const {name,email,phone,home_address, work_address,twitter, errors}=this.state;
+    const {name,email,phone,home_address, work_address,twitter,instagram,facebook, errors}=this.state;
         
         return(
         <Consumer>
@@ -99,14 +117,14 @@ onSubmit=async(dispatch,e)=>
                 return(
             <div className="card mb-3">
             <div className="card-header">
-            Add Contact
+            Kişi Ekleme Sayfası
             </div>
             <div className="card-body">
             <form onSubmit={this.onSubmit.bind(this,dispatch)}>
                 <TextInputGroup
-                    label="Name"
+                    label="Ad-Soyad"
                     name="name"
-                    placeholder="Enter Name"
+                    placeholder="Ad-Soyadınızı giriniz"
                     value={name}
                     onChange={this.onChange}
                     error={errors.name}
@@ -115,47 +133,62 @@ onSubmit=async(dispatch,e)=>
                     label="Email"
                     name="email"
                     type="email"
-                    placeholder="Enter Email"
+                    placeholder="Email Girin"
                     value={email}
                     onChange={this.onChange}
                     error={errors.email}
                   />
                   <TextInputGroup
-                    label="Phone"
+                    label="Telefon Numarası"
                     name="phone"
-                    placeholder="Enter Phone"
+                    placeholder="Telefon numarası girin"
                     value={phone}
                     onChange={this.onChange}
                     error={errors.phone}
                   />
                   <TextInputGroup
-                    label="Home address"
+                    label="Ev Adresi"
                     name="home_address"
-                    placeholder="Enter address"
+                    placeholder="Ev Adresi Girin"
                     value={home_address}
                     onChange={this.onChange}
                     error={errors.home_address}
                   />
                   <TextInputGroup
-                    label="Work adress"
+                    label="İş Adresi"
                     name="work_address"
-                    placeholder="Enter address"
+                    placeholder="İş Adresi Girin"
                     value={work_address}
                     onChange={this.onChange}
                     error={errors.work_address}
                   />
                   <TextInputGroup
-                    label="Twitter name"
+                    label="Twitter "
                     name="twitter"
-                    placeholder="Enter twitter name"
+                    placeholder="Twitter Adresini Girin"
                     value={twitter}
                     onChange={this.onChange}
                     error={errors.twitter}
                   />
+                  <TextInputGroup
+                    label="Instagram "
+                    name="instagram"
+                    placeholder="Instagram Adresini Girin"
+                    value={instagram}
+                    onChange={this.onChange}
+                    error={errors.instagram}
+                  /><TextInputGroup
+                    label="Facebook "
+                    name="facebook"
+                    placeholder="Facebook Adresini Girin"
+                    value={facebook}
+                    onChange={this.onChange}
+                    error={errors.facebook}
+                />
             
             <input type="submit"
-            value="Add Contact"
-            className="btn btn-light btn-block"/>
+            value="Kişiyi Ekle"
+            className="btn btn-dark btn-block"/>
             </form>
             </div>
             </div>

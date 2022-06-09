@@ -42,7 +42,7 @@ class Contact extends Component {
   
 render() {
       
-      const {id,name,email,phone,home_address,work_address,twitter} =this.props.contact;
+      const {id,name,email,phone,home_address,work_address,twitter,instagram,facebook} =this.props.contact;
       const {showContactInfo} = this.state;
       //or even using this.props.branding also works, but destructuring makes the code cleaner.
         return(
@@ -75,8 +75,10 @@ render() {
             <li className='list-group-item'>Email : {email}</li>
             <li className='list-group-item'>Phone : {phone}</li>
             <li className='list-group-item'>Home Address : {home_address}</li>
-            <li className='list-group-item'>work Address : {work_address}</li>
-            <li className='list-group-item'>Twitter Address : {twitter}</li>
+            <li className='list-group-item'>Work Address : {work_address}</li>
+            <li className='list-group-item'>Twitter : {twitter}</li>
+            <li className='list-group-item'>Instagram : {instagram}</li>
+            <li className='list-group-item'>Facebook : {facebook}</li>
             </ul>
 
             ):null}

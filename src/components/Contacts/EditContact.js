@@ -11,6 +11,8 @@ class EditContact extends Component{
         home_address: '',
         work_address: '',
         twitter:'',
+        instagram:'',
+        facebook:'',
         errors:{}
   
     }
@@ -27,6 +29,8 @@ class EditContact extends Component{
                        work_address:contact.work_address,
                        home_address:contact.home_address,
                        twitter:contact.twitter,
+                       instagram:contact.instagram,
+                       facebook:contact.facebook,                    
                       })
     }
 onChange=e=>
@@ -37,7 +41,7 @@ onSubmit=async(dispatch,e)=>
 {
         e.preventDefault();
 
-    const {name,email,phone,home_address,work_address,twitter}=this.state;
+    const {name,email,phone,home_address,work_address,twitter,instagram,facebook}=this.state;
     
     //Check for Errors
     if(name==='' )
@@ -70,6 +74,16 @@ onSubmit=async(dispatch,e)=>
             this.setState({errors:{twitter:'twitter address is required !'}});
             return;
         }
+    if(instagram==='' )
+        {
+            this.setState({errors:{instagram:'instagram address is required !'}});
+            return;
+        }
+    if(facebook==='' )
+        {
+            this.setState({errors:{facebook:'facebook address is required !'}});
+            return;
+        }
     
     const updateContact ={
         name,
@@ -78,6 +92,8 @@ onSubmit=async(dispatch,e)=>
         home_address,
         work_address,
         twitter,
+        instagram,
+        facebook,
     }
     
     //put request is to update
@@ -95,6 +111,8 @@ onSubmit=async(dispatch,e)=>
         home_address: '',
         work_address: '',
         twitter:'',
+        instagram:'',
+        facebook:'',
         errors:{},
     })
     
@@ -105,7 +123,7 @@ onSubmit=async(dispatch,e)=>
     render()
     {
          
-    const {name,email,phone,home_address, work_address, twitter,errors}=this.state;
+    const {name,email,phone,home_address, work_address, twitter,instagram,facebook,errors}=this.state;
         
         return(
         <Consumer>
@@ -116,14 +134,14 @@ onSubmit=async(dispatch,e)=>
                 return(
             <div className="card mb-3">
             <div className="card-header">
-            Edit Contact
+            Kişiyi Düzenle
             </div>
             <div className="card-body">
             <form onSubmit={this.onSubmit.bind(this,dispatch)}>
                 <TextInputGroup
-                    label="Name"
+                    label="Ad-Soyad"
                     name="name"
-                    placeholder="Enter Name"
+                    placeholder="Ad-Soyadınızı giriniz"
                     value={name}
                     onChange={this.onChange}
                     error={errors.name}
@@ -132,46 +150,62 @@ onSubmit=async(dispatch,e)=>
                     label="Email"
                     name="email"
                     type="email"
-                    placeholder="Enter Email"
+                    placeholder="Email Girin"
                     value={email}
                     onChange={this.onChange}
                     error={errors.email}
                   />
                   <TextInputGroup
-                    label="Phone"
+                    label="Telefon Numarası"
                     name="phone"
-                    placeholder="Enter Phone"
+                    placeholder="Telefon numarası girin"
                     value={phone}
                     onChange={this.onChange}
                     error={errors.phone}
                   />
                   <TextInputGroup
-                    label="home_address"
+                    label="Ev Adresi"
                     name="home_address"
-                    placeholder="Enter address"
+                    placeholder="Ev Adresi Girin"
                     value={home_address}
                     onChange={this.onChange}
                     error={errors.home_address}
                   />
                   <TextInputGroup
-                    label="work_adress"
+                    label="İş Adresi"
                     name="work_address"
-                    placeholder="Enter address"
+                    placeholder="İş Adresi Girin"
                     value={work_address}
                     onChange={this.onChange}
                     error={errors.work_address}
                   />
                   <TextInputGroup
-                    label="Twitter name"
+                    label="Twitter"
                     name="twitter"
-                    placeholder="Enter twitter name"
+                    placeholder="Twitter Adresini Girin"
                     value={twitter}
                     onChange={this.onChange}
                     error={errors.twitter}
                   />
+                  <TextInputGroup
+                    label="Instagram"
+                    name="instagram"
+                    placeholder="Instagram Adresini Girin"
+                    value={instagram}
+                    onChange={this.onChange}
+                    error={errors.instagram}
+                  />
+                  <TextInputGroup
+                    label="Facebook"
+                    name="facebook"
+                    placeholder="Facebook Adresini Girin"
+                    value={facebook}
+                    onChange={this.onChange}
+                    error={errors.facebook}
+                  />
             
             <input type="submit"
-            value="Update Contact"
+            value="Kişiyi Güncelle"
             className="btn btn-light btn-block"/>
             </form>
             </div>

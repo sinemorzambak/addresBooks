@@ -16,17 +16,17 @@ const Header =props=>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-               <i className='fa fa-home'/> Home
+               <i className='fa fa-home'/> Anasayfa
          </Link>
         </li>
         <li className="nav-item">
               <Link to="/contact/add" className="nav-link">
-               <i className='fa fa-plus'/>Add
+               <i className='fa fa-plus'/>Kişi Ekle
          </Link>
         </li>
         <li className="nav-item">
               <Link to="/about" className="nav-link">
-               <i className='fa fa-question'/>About
+               <i className='fa fa-question'/>Hakkında
          </Link>
         </li>
           </ul>
