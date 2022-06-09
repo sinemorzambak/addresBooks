@@ -1,6 +1,6 @@
 {
-  "homepage": "https://sinemorzambak.github.io/adres-defterim",
-  "name": "contactmanager",
+  "homepage": "https://sinemorzambak.github.io/adresBooks",
+  "name": "addresBooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
