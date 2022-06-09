@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/adres-defterim/static/css/main.3e4a245d.chunk.css",
-    "main.js": "/adres-defterim/static/js/main.590ca7ae.chunk.js",
-    "main.js.map": "/adres-defterim/static/js/main.590ca7ae.chunk.js.map",
-    "runtime~main.js": "/adres-defterim/static/js/runtime~main.ad0771cd.js",
-    "runtime~main.js.map": "/adres-defterim/static/js/runtime~main.ad0771cd.js.map",
-    "static/css/2.0624914a.chunk.css": "/adres-defterim/static/css/2.0624914a.chunk.css",
-    "static/js/2.1be79cb8.chunk.js": "/adres-defterim/static/js/2.1be79cb8.chunk.js",
-    "static/js/2.1be79cb8.chunk.js.map": "/adres-defterim/static/js/2.1be79cb8.chunk.js.map",
-    "index.html": "/adres-defterim/index.html",
-    "precache-manifest.af4ff9952c60e9f2761614486f0aef2b.js": "/adres-defterim/precache-manifest.af4ff9952c60e9f2761614486f0aef2b.js",
-    "service-worker.js": "/adres-defterim/service-worker.js",
-    "static/css/2.0624914a.chunk.css.map": "/adres-defterim/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.3e4a245d.chunk.css.map": "/adres-defterim/static/css/main.3e4a245d.chunk.css.map",
-    "static/media/App.css": "/adres-defterim/static/media/bckground.a5d87150.png"
+    "main.css": "/adresBooks/static/css/main.4b78af01.chunk.css",
+    "main.js": "/adresBooks/static/js/main.f3d9dc70.chunk.js",
+    "main.js.map": "/adresBooks/static/js/main.f3d9dc70.chunk.js.map",
+    "runtime~main.js": "/adresBooks/static/js/runtime~main.ffae2bcf.js",
+    "runtime~main.js.map": "/adresBooks/static/js/runtime~main.ffae2bcf.js.map",
+    "static/css/2.3661fc73.chunk.css": "/adresBooks/static/css/2.3661fc73.chunk.css",
+    "static/js/2.cf504a85.chunk.js": "/adresBooks/static/js/2.cf504a85.chunk.js",
+    "static/js/2.cf504a85.chunk.js.map": "/adresBooks/static/js/2.cf504a85.chunk.js.map",
+    "index.html": "/adresBooks/index.html",
+    "precache-manifest.b05b45a33de01155b2e01a2fe99ef4a9.js": "/adresBooks/precache-manifest.b05b45a33de01155b2e01a2fe99ef4a9.js",
+    "service-worker.js": "/adresBooks/service-worker.js",
+    "static/css/2.3661fc73.chunk.css.map": "/adresBooks/static/css/2.3661fc73.chunk.css.map",
+    "static/css/main.4b78af01.chunk.css.map": "/adresBooks/static/css/main.4b78af01.chunk.css.map",
+    "static/media/App.css": "/adresBooks/static/media/bckground.a5d87150.png"
   }
 }
