@@ -12,22 +12,22 @@ class Contact extends Component {
         this.state={
         showContactInfo : false
         };
-        //this.onshowClick() = this.onshowClick.bind(this);
+        
     }
     
 
-//if you do not use arrow function, this keyword won't work for just onshowClick(){}
+//arrow işlevini kullanmazsanız, bu anahtar kelime yalnızca onshowClick() için çalışmaz{}
   onShowClick=(e)=>
     {
         this.setState({showContactInfo:!this.state.showContactInfo});
         console.log(e);
     };
 
-//For an arrow function, we pust async before the parameters
+////Bir arrow işlevi için, parametrelerin önüne async koyarız
  onDeleteClick=async(id,dispatch,e)=>
     {
      
-     //Since we are not gettin anything, we need not save the rquest response in a variable
+     // Hiçbir şey almadığımız için istek yanıtını bir değişkene kaydetmemize gerek yok
      try{
         await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
         dispatch({type:'DELETE_CONTACT',payload:id}); 
@@ -44,7 +44,7 @@ render() {
       
       const {id,name,email,phone,home_address,work_address,twitter,instagram,facebook} =this.props.contact;
       const {showContactInfo} = this.state;
-      //or even using this.props.branding also works, but destructuring makes the code cleaner.
+      //hatta this.props.branding'i kullanmak da işe yarar, ancak destructing daha temiz hale getirir.
         return(
             <Consumer>
             {value=>{
@@ -96,7 +96,7 @@ render() {
     
 }
 
-//note default props is defined outside the class.
+//note default props sınıfın dışında tanımlanır.
 Contact.defaultProps={
         name:'Priya',
         phone:'9450465058'
